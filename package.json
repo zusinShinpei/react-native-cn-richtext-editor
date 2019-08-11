@@ -17,7 +17,8 @@
   "peerDependencies": {
     "react": "^16.6.1",
     "react-native": "^0.57.5",
-    "react-native-parsed-text": "*"
+    "react-native-parsed-text": "*",
+    "react-native-fetch-blob": "^0.10.8"
   },
   "keywords": [
     "react",
