@@ -56,8 +56,8 @@ class CNRichTextView extends Component {
                 key={input.id}
                 style={{
                     borderWidth: 0,
-                    paddingHorizontal:20,
-                    marginVertical:12,
+                    paddingHorizontal: 20,
+                    marginVertical: 12,
                     color,
                     textAlign: this.props.align || 'left'
                 }}
