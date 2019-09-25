@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Text, StyleSheet, TextStyle} from 'react-native';
+import {Linking, Text, StyleSheet, TextStyle} from 'react-native';
 import _ from 'lodash';
 import ParsedText from "react-native-parsed-text";
 import {COLOR_BLUEBERRY} from "../../../src/constants/color";
@@ -37,7 +37,22 @@ class CNStyledText extends Component {
                   color: COLOR_BLUEBERRY,
                   ...fonts.nanumDefault
                 }
-              }
+              },
+              {
+					      type: 'url',
+					      style: {
+						      color: 'blue',
+						      textDecorationLine: 'underline',
+					      },
+					    onPress: async (url: string) => {
+						    console.log(url);
+						    if (/^http/.test(url)) {
+							    await Linking.openURL(url);
+						    } else {
+							    await Linking.openURL('http://' + url);
+						    }
+					    },
+				},
             ]}>
           {this.props.text}
         </ParsedText>
