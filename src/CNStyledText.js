@@ -31,14 +31,7 @@ class CNStyledText extends Component {
         <ParsedText
             style={this.props.style}
             parse={[
-              {
-                pattern: /#([0-9a-zA-Z가-힣ㄱ-ㅎ!$%^&*()_+-=<>?]+)/,
-                style: {
-                  color: COLOR_BLUEBERRY,
-                  ...fonts.nanumDefault
-                }
-              },
-              {
+	    {
 					      type: 'url',
 					      style: {
 						      color: 'blue',
@@ -53,6 +46,14 @@ class CNStyledText extends Component {
 						    }
 					    },
 				},
+              {
+                pattern: /#([0-9a-zA-Z가-힣ㄱ-ㅎ!$%^&*()_+-=<>?]+)/,
+                style: {
+                  color: COLOR_BLUEBERRY,
+                  ...fonts.nanumDefault
+                }
+              },
+              
             ]}>
           {this.props.text}
         </ParsedText>
